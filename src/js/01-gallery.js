@@ -22,7 +22,5 @@ alt=${description} />
 
 gallery.insertAdjacentHTML('beforeend', createGallery.join(''))
 
-
-
 var lightbox = new SimpleLightbox('.gallery .gallery__item', { captionsData: "alt", captionDelay: "250" });
 
