@@ -22,14 +22,7 @@ alt=${description} />
 
 gallery.insertAdjacentHTML('beforeend', createGallery.join(''))
 
-gallery.addEventListener('click' , openBigPicture)
+
 
 var lightbox = new SimpleLightbox('.gallery .gallery__item', { captionsData: "alt", captionDelay: "250" });
 
-function openBigPicture(e) {
-  e.preventDefault()
-
-  if (e.target.nodeName !== 'IMG') {
-      return;
-    };
-}
