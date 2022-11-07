@@ -16,6 +16,14 @@ function onFormImput(e) {
 };
 
 function onFormSubmit(e) {
- 
+
+    e.preventDefault();
+    if (localStorage.getItem(STORAGE_KEY)) {
+        console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)))
+    }
+
+    e.currentTarget.reset();
+
+    localStorage.removeItem(STORAGE_KEY);
 };
 
