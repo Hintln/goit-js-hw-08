@@ -32,4 +32,10 @@ function addTextToInput() {
     if (!JSON.parse(localStorage.getItem(STORAGE_KEY))) {
         return
     };
+      if (JSON.parse(localStorage.getItem(STORAGE_KEY)).email) {
+        feedbackForm.email.value = JSON.parse(localStorage.getItem(STORAGE_KEY)).email
+    };
+    if (JSON.parse(localStorage.getItem(STORAGE_KEY)).message) {
+        feedbackForm.message.value = JSON.parse(localStorage.getItem(STORAGE_KEY)).message
+    };
 };
