@@ -7,7 +7,7 @@ const feedbackForm = document.querySelector('.feedback-form');
 
 feedbackForm.addEventListener('input', throttle(onFormImput, 500));
 feedbackForm.addEventListener('submit', onFormSubmit);
- 
+addTextToInput();
 
 function onFormImput(e) {
     formData[e.target.name] = e.target.value;
@@ -27,3 +27,9 @@ function onFormSubmit(e) {
     localStorage.removeItem(STORAGE_KEY);
 };
 
+
+function addTextToInput() {
+    if (!JSON.parse(localStorage.getItem(STORAGE_KEY))) {
+        return
+    };
+};
