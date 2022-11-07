@@ -27,7 +27,6 @@ function onFormSubmit(e) {
     localStorage.removeItem(STORAGE_KEY);
 };
 
-
 function addTextToInput() {
     if (!JSON.parse(localStorage.getItem(STORAGE_KEY))) {
         return
